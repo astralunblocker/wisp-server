@@ -14,56 +14,7 @@ from wisp.server import ratelimit
 from wisp.server import net
 
 static_path = None
-default_html = f"""
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
-    <meta name="robots" content="noindex">
-    <title>wisp-server-python v{wisp.version}</title>
-    <style>
-      html {{
-        color-scheme: light dark;
-      }}
-      h1, p {{
-        font-family: sans-serif;
-      }}
-      body {{
-        max-width: 600px;
-        margin-left: auto;
-        margin-right: auto;
-      }}
-      pre {{
-        white-space: pre-wrap
-      }}
-    </style>
-  </head>
-  <body>
-    <h1>wisp-server-python</h1>
-    <p>This is a <a href="https://github.com/MercuryWorkshop/wisp-protocol">Wisp protocol</a> server running
-     <a href="https://github.com/MercuryWorkshop/wisp-server-python">wisp-server-python</a> v{wisp.version}.</p>
-    <p>This program is licensed under the <a href="https://github.com/MercuryWorkshop/wisp-server-python/blob/main/LICENSE">GNU AGPL v3</a>.</p>
-    <pre>
-wisp-server-python: a Wisp server implementation written in Python
-Copyright (C) 2025 Mercury Workshop
-
-This program is free software: you can redistribute it and/or modify
-it under the terms of the GNU Affero General Public License as published by
-the Free Software Foundation, either version 3 of the License, or
-(at your option) any later version.
-
-This program is distributed in the hope that it will be useful,
-but WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-GNU Affero General Public License for more details.
-
-You should have received a copy of the GNU Affero General Public License
-along with this program.  If not, see &lt;https://www.gnu.org/licenses/&gt;.
-</pre>
-  </body>
-</html>
-""".strip()
+default_html = "na"
 
 async def connection_handler(websocket, path):
   client_ip = websocket.remote_address[0]
